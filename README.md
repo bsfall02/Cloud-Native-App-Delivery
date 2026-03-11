@@ -29,7 +29,7 @@
 
 ```bash
 # 1. Cloner le dépôt
-git clone https://github.com/<VOTRE_USERNAME>/Cloud-Native-App-Delivery.git
+git clone https://github.com/bsfall02/Cloud-Native-App-Delivery.git
 cd Cloud-Native-App-Delivery
 
 # 2. Construire l'image Docker
@@ -89,7 +89,7 @@ git push → main
 
 ### Visualiser le pipeline
 
-Rendez-vous sur : `https://github.com/<VOTRE_USERNAME>/Cloud-Native-App-Delivery/actions`
+Rendez-vous sur : `https://github.com/bsfall02/Cloud-Native-App-Delivery/actions`
 
 ---
 
