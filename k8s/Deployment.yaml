@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: inventory-app
+  labels:
+    app: inventory-app
+spec:
+  replicas: 3          # Haute disponibilité : 3 réplicas
+  selector:
+    matchLabels:
+      app: inventory-app
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0   # Zéro downtime pendant les mises à jour
+  template:
+    metadata:
+      labels:
+        app: inventory-app
+    spec:
+      containers:
+        - name: inventory-app
+          image: bsfall02/inventory-app:v1.0
+          ports:
+            - containerPort: 3000
+          env:
+            - name: SERVER_PORT
+              value: "3000"
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "250m"
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
+          readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 3000
+            initialDelaySeconds: 30
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 3000
+            initialDelaySeconds: 60
+            periodSeconds: 20
