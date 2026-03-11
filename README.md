@@ -95,13 +95,13 @@ Rendez-vous sur : `https://github.com/bsfall02/Cloud-Native-App-Delivery/actions
 
 > ✅ **Capture CI/CD — Pipeline réussi (tout en vert)**
 >
-> *(Insérer capture d'écran ici)*
+> ![pipeline](screenshots/pipeline.png)
 
 ---
 
 > ✅ **Capture Docker Hub — Image avec tag v1.0**
 >
-> *(Insérer capture d'écran ici)*
+> ![dockerhub](screenshots/dockerhub.png)
 
 ---
 
@@ -168,13 +168,13 @@ kubectl set image deployment/inventory-app inventory-app=<USERNAME>/inventory-ap
 
 > ✅ **Capture Kubernetes — `kubectl get all` (Pods et Service actifs)**
 >
-> *(Insérer capture d'écran ici)*
+> ![kubernetes](screenshots/kubectl.png)
 
 ---
 
 > ✅ **Capture Navigateur — Application affichée via l'IP du cluster**
 >
-> *(Insérer capture d'écran ici)*
+> ![app](screenshots/app.png)
 
 ---
 
