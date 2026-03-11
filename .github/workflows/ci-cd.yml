@@ -3,7 +3,7 @@ name: CI/CD — Build & Push to Docker Hub
 on:
   push:
     branches:
-      - master
+      - main
 
 env:
   IMAGE_NAME: inventory-app
